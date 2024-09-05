@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #721e42 0%, #2a9875 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #872424;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.hand {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 10px;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hour-hand {
+    width: 8px;
+    height: 60px;
+    background: #f1f1f0; /* Gold color for hour hand */
+}
+
+.minute-hand {
+    width: 6px;
+    height: 80px;
+    background: #ffffff; /* White color for minute hand */
+}
+
+.second-hand {
+    width: 4px;
+    height: 90px;
+    background: #ff5733; /* Red color for second hand */
+}
+
+.center-dot {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for clock numbers */
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: circle(140px at center);
+    background: rgba(255, 255, 255, 0.1);
+}
